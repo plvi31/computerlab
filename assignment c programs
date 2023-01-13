@@ -1,0 +1,884 @@
+#include<stdio.h>
+#include<string.h>
+#include<math.h>
+
+int arithmatics(){
+    //1. To print all arithmatic operators.
+    printf("Enter the the two numbers  : ");
+    int a,b;
+    scanf("%d %d",&a,&b);
+    printf("Sum is %d",(a+b));
+    printf("Subtraction is %d\n",(a-b));
+    printf("Product is %d\n",(a*b));
+    printf("Division is %d\n",(a/b));
+    printf("Reminder is %d",(a%b));
+    return 0;
+}
+int triarea(){
+    //2. Write a C program to enter base and height of a triangle and find its area.
+    printf("Enter the Base and height of the Triangle respectively : ");
+    float b,h,a;
+    scanf("%g %g",&b,&h);
+    a=(b*h)/2;
+    printf("Are of triangle is %g ",a);
+    return 0;
+}
+int thangle(){
+    //3. Write a C program to enter two angles of a triangle and find the third angle.
+    printf("Enter the Both of the angle of triangles : ");
+    int a,b,c;
+    scanf("%d %d",&a,&b);
+    c=180-(a+b);
+    printf("The third angle of triangle is : %d",c);
+    return 0;
+}
+int contime(){
+    //4. Write a C program to convert days into years, weeks and days.
+    printf("Enter the number of days : ");
+    int days,year,weeks;
+    scanf("%d",&days);
+    year=days/365;
+    weeks=(days-(year*365))/7;
+    days=days-((year*365)+(weeks*7));
+    printf("Year %d Weeks %d Days %d",year,weeks,days);
+    return 0;
+}
+int power(){
+    //5. Write a C program to find power of and square root.
+    printf("Enter the Number and Power : ");
+    int a,b,c;
+    scanf("%d %d",&a,&b);
+    c=pow(a,b);
+    printf("%d^%d is %d",a,b,c);
+    return 0;
+}int sqrte(){
+    printf("Enter the Number : ");
+    int a,r;
+    scanf("%d",&a);
+    r=sqrt(a);
+    printf("Square root of %d is %d",a,r);
+    return 0;
+}int marks(){
+    //6. Write a C program to enter marks of five subjects and calculate total, average and percentage.
+    float h,e,m,s,t;
+    printf("Enter the marks of Hindi : \n");
+    scanf("%g",&h);
+    printf("Enter the marks of English : \n");
+    scanf("%g",&e);
+    printf("Enter the marks of Maths : \n");
+    scanf("%g",&m);
+    printf("Enter the marks of Science : \n");
+    scanf("%g",&s);
+    printf("Enter the marks of S.S.T : \n");
+    scanf("%g",&t);
+    float r=(h+e+m+s+t);
+    printf("Total marks are %g\n",r);
+    printf("Average marks are %g\n",(r/5));
+    printf("Percentage is %g %%",(r/5));
+    return 0;
+}
+int Ftoc(){
+    //7. To convert the temperature from Fahrenheit to Celsious.
+    printf("Enter the temperature in Fahrenheit ");
+    int f;
+    scanf("%d",&f);
+    float c=(f-32)*0.55;
+    printf("Temperature in Celsious is %g\n",c);
+    return 0;
+}
+int a,b,c;
+     //8. swap two numbers 
+     int main(){
+	printf("enter the value");
+	scanf("%d",&a);
+	printf("enter the value");
+	scanf("%d",&b);
+	a=a-b;
+	b=a+b;
+	a=b-a;
+	return 0;
+}
+int sume(int n){
+    //9. Sum of the digits of an number
+    int sum=0;
+    while(n>0){
+        int digit=n%10;
+        sum=sum+digit;
+        n=n/10;
+    }
+    return sum;
+}
+    // 10. allow to vote or note
+int main(){
+    int a;
+    printf("enter teh value");
+    scanf("%d",&a);
+    if(a>=18){
+        printf("allow to vote");
+
+    }
+    else{
+        printf("not allow to vote");
+    }
+    return 0;
+}
+int bill(){
+    //11.Electricity question
+    float unit,amount;
+    printf("Enter the used unit of electricity : ");
+    scanf("%g",&unit);
+    if(unit<50){
+        amount=unit*0.5;
+    }
+    else if(unit<=150){
+        amount=(50*0.5)+(unit-50)*0.75;
+    }
+    else if(unit<250){
+        amount=(50*0.5)+(100*.75)+(unit-150)*1.2;
+    }else {
+        amount=(50*0.5)+(100*.75)+(100*1.2)+(unit-250)*1.5;
+    }
+    amount =((amount*20)/100)+amount;
+    printf("Your given amount is %g",amount);
+    return 0;
+}int interchange3(){
+    //12. Program to interchange the values using bitwise operator
+    printf("Enter the both number : ");
+    int a,b;
+    scanf("%d %d",&a,&b);
+    printf("Current a = %d and current b = %d \n",a,b);
+    a=a^b;
+    b=a^b;
+    a=a^b;
+    printf("After swap a = %d and b = %d ",a,b);
+    return 0;
+}
+int  word ,vowels{
+    //13. program to check vowels and consonent.
+    printf("enter the word: ")
+    scanf("%c",&word);
+    if(word=='a','e','i','o','u'){
+        printf("vowles");
+    
+    }else{
+        printf("consonent");
+    }
+    return 0;
+}
+    //14. program to find addition, subtraction, multiplication, division.
+int addition(int a, int b);
+int subtraction(int a, int b);
+int multiplication(int a, int b);
+int division(int a, int b);
+int main(){
+    int a,b;
+    printf("enter the value: ");
+    scanf("%d",&a);
+    printf("enter the value: ");
+    scanf("%d",&b);
+    printf("addition is: %d",addition(a,b));
+    printf("subtraction is: %d",subtraction(a,b));
+    printf("multiplication is: %d",multiplication(a,b));
+    printf("division is: %d",division(a,b));
+    return 0;
+}
+int addition(int a, int b){
+    return a+b;
+}
+int subtraction(int a, int b){
+    return a-b;
+}
+int multiplication(int a, int b){
+    return a * b;
+}
+int division(int a, int b){
+    return a % b;
+}
+int eqtriarea(){
+    //15. Write a C program to calculate area of an equilateral triangle
+    printf("Enter the Side of Equilateral Tiangle : ");
+    float a,r;
+    scanf("%g",&a);
+    r=(sqrt(3)*a*a)/4;
+    printf("The area of Equilateral Triangle is %g",r);
+    return 0;
+}
+int si(){
+    //16. Write a C program to enter P, T, R and calculate Simple Interest.
+    float p,r,t,s;
+    printf("Enter the Principle : \n");
+    scanf("%g",&p);
+    printf("Enter the Rate : \n");
+    scanf("%g",&r);
+    printf("Enter the Time in years : \n");
+    scanf("%g",&t);
+    s=(p*r*t)/100;
+    printf("Simple interest is : %g",s);
+    return 0;
+}
+int sume(int n){
+    //17. Sum of the digits of an number
+    int sum=0;
+    while(n>0){
+        int digit=n%10;
+        sum=sum+digit;
+        n=n/10;
+    }
+    return sum;
+}
+    // 18. write a program to find the number is prime number
+int main(){
+    int n,i,j;
+    printf("enter the number: ");
+    scanf("%d",&n);
+    if(n==0||n==1)
+    j=1;
+    for(i=2;i<=n/2;++i){
+        if(n%i==0){
+            j=1;
+            break;
+        }
+    }
+    if(j==0){
+    printf("%d is a prime number",n);
+    }
+    else{
+        printf("%d is not a prime number",n);
+    }
+    return 0;
+}
+//19. even ->even
+//odd ->odd
+int main(){
+	int x;
+	printf("enter the value: ");
+	scanf("%d",&x);
+	printf("%d", x%2==0);
+	return 0;
+}
+    //20. print table
+int printtable(int n);
+int main(){
+    int n;
+    printf("enter the value: ");
+    scanf("%d",&n);
+    printtable(n);
+    return 0;
+}
+int printtable(int n){
+    for(int i=1;i<=10;i++){
+        printf("%d",n*i);
+        printf("\n");
+    }
+}
+int palindrome(){
+    //21. Palindrome
+    int num,digit;
+    int sum=0;
+    printf("Enter the number : ");
+    scanf("%d",&num);
+    int temp=num;
+    while(num>0){
+        digit=num%10;
+        sum=sum*10+digit;
+        num=num/10;
+    }
+    if(sum==temp){
+        printf("it's a Palindrome");
+    }
+    else{
+        printf("it's NOT a Palindrome");
+    }
+    return 0;
+}
+int leepyear(){
+    //22. Leap Year Code
+    int n;
+    printf("Enter the Year number : ");
+    scanf("%d",&n);
+    if(n%4!=0){
+        printf("Its NOT a leap year");
+    }else if(n%100!=0){
+        printf("Its A leap year");
+    }
+    else if(n%400!=0){
+        printf("Its NOT a leap year");
+    }else{
+        printf("Its A leap year");
+    }
+    return 0;
+}
+int sumfabonaci(){
+    //23. Will print Sum of Fabonachi
+    int n,a=0,b=1,sum=0,c;
+    printf("Enter the nth number : ");
+    scanf("%d",&n);
+    while(a<=n){
+        printf("%d ",a);
+        sum=sum+a;
+        c=a+b;
+        a=b;
+        b=c;
+    }
+    printf("\n%d",sum);
+    return 0;
+}
+int strong(){
+    //24. Strong 
+    int a;
+    printf("Enter the number : ");
+    scanf("%d",&a);
+    int temp=a;
+    int sum=0;
+    while(a>0){
+        int digit=a%10;
+        int fact=1;
+        for(int i=2;i<=digit;i++){
+        fact=fact*i;
+        }
+        sum=sum+fact;
+        a=a/10;
+    }
+    if(sum==temp){
+        printf("Its a strong number");
+    }
+    else{
+        printf("Its NOT a strong number");
+    }
+    return 0;
+}
+int lengthnum(int a){
+    //25. WRP to count length of number
+    int count=0;
+    while(a>0){
+        count++;
+        a=a/10;
+    }
+    return count;
+}
+int perfect(){
+    //26.Perfect Number
+    int a;
+    int sum=0;
+    printf("Enter the number : ");
+    scanf("%d",&a);
+    for(int i=1;i<a;i++){
+        if(a%i==0){
+            sum=sum+i;
+        }
+    }
+    if(sum==a){
+        printf("Perfect number ");
+    }else{
+        printf("Not Perfect number");
+    }
+    return 0;
+}
+int fabonaci(){
+    //27. Fabonaci
+    printf("Enter the nth value : ");
+    int a=0,b=1,c,n;
+    scanf("%d",&n);
+    while(a<=n){
+        printf("%d\n",a);
+        c=a+b;
+        a=b;
+        b=c;
+    }
+    return 0;
+}
+int hcflcm(){
+    //28. Find HCF and LCM
+    int a,b,hcf;
+    printf("Enter the number : ");
+    scanf("%d %d",&a,&b);
+    for(int i=a;i>=1;i--){
+        if(a%i==0 && b%i==0){
+            hcf=i;
+            break;
+        }
+    }
+    printf("HCF =%d , LCM is %d ",hcf,(a*b)/hcf);
+    return 0;
+}
+int deletarr(){
+    //29. For Deleating element of an array
+    int arr[100];
+    printf("Enter the amount of element u want to enter : ");
+    int e,delet,count=0;
+    scanf("%d",&e);
+    // Entering element of array
+    for(int i=0;i<e;i++){
+        scanf("%d",&arr[i]);
+    }
+    // Deleat element
+    printf("Enter the to delete : ");
+    scanf("%d",&delet);
+    // Deleation
+    for(int i=0;i<e;i++){
+        if(arr[i]==delet){
+            count++;
+            for(int j=i;j<e;j++){
+                arr[j]=arr[j+1];
+            }
+        }
+    }
+    // Printing array
+    for(int i=0;i<e-count;i++){
+        printf("%d ",arr[i]);
+    }
+    
+    return 0;
+}
+int powerss(int a,int b){
+    //30. Find power by user define number
+    int ans=1;
+    for(int i=1;i<=b;i++){
+        ans*=a;
+    }
+    return ans;
+}
+int perfectsqr(int a){
+    //31. Will find the perfect square
+    int x=a%10;
+    if(x==2||x==3||x==7||x==8){
+        return 0;
+    }
+    for(int i=0;i<a/2;i++){
+            if(i*i==a){
+                return 1;
+            }
+    }
+    return 0;
+}
+int armstrong(int a){
+    //32. To find armstrong
+    int sum=0;
+    int temp=a;
+    int len=lengthnum(a);
+    while(a>0){
+        int digit=a%10;
+        sum=sum+pow(digit,len);
+        a=a/10;
+    }
+    if(sum==temp){
+        printf("Its A armstrong number");
+    }
+    else{
+        printf("Its NOT a armstrong numer");
+    }
+    return 0;
+}
+    // 33.find diameter, circumference, area of circle.
+int diameter(int d);
+int circumference(int c);
+int area(int a);
+int main(){
+    int radius,d,c,a;
+    printf("enter the radius: ");
+    scanf("%f",&radius);
+    diameter(int d);
+    circumference(int c);
+    area(int a);
+
+    return 0;
+}
+int diameter(int d){
+    int radius;
+    printf("diameter: %d",2*radius);
+}
+int circumference(int c){
+    int radius;
+    printf("circumference is: %f",2*3.14*radius);
+}
+int area(int a){
+    int radius;
+    printf("area of circleis: %d",3.14*radius*radius);
+}
+        //34. power of two numbers.
+    int n{
+    printf("enter the value: ");
+    scanf("%d",&n);
+    int square=pow(n,2);
+    printf("%f",pow(n,2));
+    return 0;
+}
+    //35. change value using pointer.
+int a,b,c{
+    int *p;
+    p=&a;
+    a=10;
+    c=*p;
+    a=12;
+    b=*p;
+    return 0;
+}
+    //36. sum of two number using function.
+int sum(int a,int b);
+int main(){
+	int a,b;
+	printf("enter the first value: ");
+	scanf("%d",&a);
+	printf("enter the second value: ");
+	scanf("%d",&b);
+	
+	
+	printf("sum is %d: ",sum(a,b));
+	return 0;
+}
+int sum(int a,int b){
+	return a+b;
+}
+      //37. using break.
+int i{
+	for(int i=1 ; i<=5; i++){
+		if(i==3){
+			continue;
+		}
+		printf("%d\n",i);
+	}
+	return 0;
+}
+     //38. subtraction, multiplication, division,addition using function.
+float addition(float a, float b);
+float addition(float a, float b);
+float substraction(float a, float b);
+float multiplication(float a, float b);
+float division(float a, float b);
+int main(){
+    int a,b;
+    printf(" WELCOME ");
+    printf("enter the value: ");
+    scanf("%d",&a);
+    printf("enter the value: ");
+    scanf("%d",&b);
+    char ch;
+    scanf("%c",&ch);
+    if(ch == +)
+    {
+        printf("addition is: %f",addition(a,b));
+    }else if(ch == -){
+        printf("substraction is: %f",substraction(a,b));
+    }else if(ch == *){
+        printf("multiplication is: %f",multiplication(a,b));
+    }else if(ch == %){
+        printf("division is: %f",division(a,b));
+    }
+
+    return 0;
+}
+float addition(float a, float b){
+    return a+b;
+}
+float substraction(float a, float b){
+    return a-b;
+}
+float multiplication(float a, float b){
+    return a * b;
+}
+float division(float a, float b){
+    return a / b;
+}
+int hollowdim(){
+    //39. Will print Hollow Dimand
+    int n;
+    printf("Enter the length of pattern : ");
+    scanf("%d",&n);
+    for(int i=1;i<n;i++){
+        // Spaces
+          for(int s=1;s<=n-i;s++){
+                printf(" ");
+             }
+        // Star
+        for(int j=1;j<=i;j++){
+            if(j==1||j==i){
+                printf("* ");
+            }
+            else{
+                printf("  ");
+            }
+        }
+        printf("\n");
+    }
+    for(int i=n;i>=1;i--){
+        // Spaces
+         for(int s=1;s<=n-i;s++){
+             printf(" ");
+         }
+        // Star
+        for(int j=1;j<=i;j++){
+            if(j==1||j==i){
+                printf("* ");
+            }else{
+                printf("  ");
+            }
+        }
+        printf("\n");
+    }
+    return 0;
+}
+     //40. pyramid.
+int i,j,rows{
+	printf("enetr the number of rows");
+	scanf("%d", &rows);
+	for(i=1; i<= rows; ++i){
+		for (j=1; j<=i; ++j){
+			printf("*");
+		}
+		printf("\t");
+		printf("\n");
+	}
+	return 0;
+}
+int io(){
+    //42.Write a C program to perform input/output of all basic data types.
+    char ch;
+    printf("Enter a char : ");
+    scanf("%c",&ch);
+    printf("%c\n",ch);
+    return 0;
+}int sum( ){
+    //43. To Print the Sum of two Numbers.
+    printf("Enter the number : ");
+    int a,b,c;
+    scanf("%d %d",&a,&b);
+    c=a+b;
+    printf("The sum is %d\n",c);
+    return 0;
+}
+int recperimeter(){
+    //44. To Print the Perimeter of the rectangle.
+    printf("Enter the Length and Breadth :");
+    int l,b;
+    scanf("%d %d",&l,&b);
+    int c=(int)2*(l+b);
+    printf("Perimeter of rectangle is %d\n",c);
+    return 0;
+}int recarea(){
+    //45. To Print the area of the rectangle.
+    printf("Enter the Length and Breadth :");
+    int l,b;
+    scanf("%d %d",&l,&b);
+    printf("Area of rectangle is %d\n",(l*b));
+    return 0;
+}
+int interchange1(){
+    //46. Program to interchange the values using assingnment operator
+    printf("Enter the both number : ");
+    int a,b,temp;
+    scanf("%d %d",&a,&b);
+    printf("Current a = %d and current b = %d \n",a,b);
+    temp=a;
+    a=b;
+    b=temp;
+    printf("After swap a = %d and b = %d ",a,b);
+    return 0;
+}
+int rstriangle(){
+    //47.Right Shifted Trinangle
+    printf("Enter the number : ");
+    int n;
+    scanf("%d",&n);
+    for(int i=n;i>=1;i--){
+        // Space
+        for(int k=1;k<=(n-i);k++){
+            printf(" ");
+        }
+        // Star
+        for(int j=1;j<=i;j++){
+            printf("*");
+        }
+        // Change Line
+        printf("\n");
+        
+    }
+    return 0;
+}
+int square(){
+    //48. Printing of Square pattern
+    int n;
+    printf("Enter the length of pattern : ");
+    scanf("%d",&n);
+    // Hollow Square
+    for(int i=1;i<=n;i++){
+        for(int j=1;j<=n;j++){
+            if(i==1||i==n||j==1||j==n){
+                printf(" * ");
+            }else{
+                printf("   ");
+            }
+        }printf("\n");
+    }
+    return 0;
+}
+int deletarr(){
+    //49. For Deleating element of an array
+    int arr[100];
+    printf("Enter the amount of element u want to enter : ");
+    int e,delet,count=0;
+    scanf("%d",&e);
+    // Entering element of array
+    for(int i=0;i<e;i++){
+        scanf("%d",&arr[i]);
+    }
+    // Deleat element
+    printf("Enter the to delete : ");
+    scanf("%d",&delet);
+    // Deleation
+    for(int i=0;i<e;i++){
+        if(arr[i]==delet){
+            count++;
+            for(int j=i;j<e;j++){
+                arr[j]=arr[j+1];
+            }
+        }
+    }
+    // Printing array
+    for(int i=0;i<e-count;i++){
+        printf("%d ",arr[i]);
+    }
+    
+    return 0;
+}
+int table(){
+    //50. Will print the multiplication Table
+    int n;
+    printf("Enter the number : ");
+    scanf("%d",&n);
+    for(int i=1;i<=10;i++){
+        printf("%d * %d = %d \n",n,i,(n*i));
+    }
+    return 0;
+}
+int hcflcm(){
+    //51. Find HCF and LCM
+    int a,b,hcf;
+    printf("Enter the number : ");
+    scanf("%d %d",&a,&b);
+    for(int i=a;i>=1;i--){
+        if(a%i==0 && b%i==0){
+            hcf=i;
+            break;
+        }
+    }
+    printf("HCF =%d , LCM is %d ",hcf,(a*b)/hcf);
+    return 0;
+}
+//52. pyramid.
+int main(){
+	int i,j,rows;
+	printf("enetr the number of rows");
+	scanf("%d", &rows);
+	for(i=1; i<= rows; ++i){
+		for (j=1; j<=i; ++j){
+			printf("*");
+		}
+		printf("\t");
+		printf("\n");
+	}
+	return 0;
+}
+int palindrome(){
+    //53. Palindrome
+    int num,digit;
+    int sum=0;
+    printf("Enter the number : ");
+    scanf("%d",&num);
+    int temp=num;
+    while(num>0){
+        digit=num%10;
+        sum=sum*10+digit;
+        num=num/10;
+    }
+    if(sum==temp){
+        printf("it's a Palindrome");
+    }
+    else{
+        printf("it's NOT a Palindrome");
+    }
+    return 0;
+}
+int square(){
+    // Printing of Square pattern
+    int n;
+    printf("Enter the length of pattern : ");
+    scanf("%d",&n);
+    // Hollow Square
+    for(int i=1;i<=n;i++){
+        for(int j=1;j<=n;j++){
+            if(i==1||i==n||j==1||j==n){
+                printf(" * ");
+            }else{
+                printf("   ");
+            }
+        }printf("\n");
+    }
+    return 0;
+}
+int hollowdim(){
+    //54. Will print Hollow Dimand
+    int n;
+    printf("Enter the length of pattern : ");
+    scanf("%d",&n);
+    for(int i=1;i<n;i++){
+        // Spaces
+          for(int s=1;s<=n-i;s++){
+                printf(" ");
+             }
+        // Star
+        for(int j=1;j<=i;j++){
+            if(j==1||j==i){
+                printf("* ");
+            }
+            else{
+                printf("  ");
+            }
+        }
+        printf("\n");
+    }
+    for(int i=n;i>=1;i--){
+        // Spaces
+         for(int s=1;s<=n-i;s++){
+             printf(" ");
+         }
+        // Star
+        for(int j=1;j<=i;j++){
+            if(j==1||j==i){
+                printf("* ");
+            }else{
+                printf("  ");
+            }
+        }
+        printf("\n");
+    }
+    return 0;
+}
+int fillsquare(){
+    //55. Will print this
+    /*
+    * * * * * *
+    * A B C D *
+    * E F G H *  
+    * I J K L *
+    * * * * * *
+    */
+  int n;
+    printf("Enter the length of pattern : ");
+    scanf("%d",&n);
+    // Filled Square
+    int c=65;
+    for(int i=1;i<=n;i++){
+        for(int j=1;j<=n;j++){
+            if(i==1||i==n||j==1||j==n){
+                printf(" * ");
+            }else{
+                printf(" %c ",c);
+                c++;
+
+            }
+        }printf("\n");
+    }
+    return 0;  
+}
+    
+
